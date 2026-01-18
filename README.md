@@ -17,6 +17,7 @@ ollama pull nomic-embed-text
 Copy `.env.example`, name it `.env`. Fill out the empty API keys.
 
 ## Virtual Enviornment
+### Windows
 Create virtual enviornment
 ```
 py -3.13 -m venv .venv
@@ -25,6 +26,21 @@ py -3.13 -m venv .venv
 Activate virtual enviornment
 ```
 .\.venv\Scripts\activate
+```
+
+Install Requirements
+```
+pip install -r requirements.txt
+```
+### Ubuntu
+Create Virtual enviornment
+```
+python -m venv .venv
+```
+
+Activate virtual enviornment
+```
+source .\.venv\bin\activate
 ```
 
 Install Requirements
