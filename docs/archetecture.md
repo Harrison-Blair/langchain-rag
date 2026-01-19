@@ -7,5 +7,4 @@ General app architecture for the RAG agent application
     - Diagnostics w/ `LangSmith`
 - PDF text extraction w/ `PyMuPDF`
 
-- CLI interface w/ `Typer`
-- GUI interface w/ `CustomTinker`
+- UI interface w/ `Rich` & `Textual`
