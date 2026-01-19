@@ -1,0 +1,90 @@
+/* Tab Container Styles */
+TabbedContent {
+    height: 1fr;
+}
+
+TabPane {
+    padding: 1;
+}
+
+/* Semantic spacing for all Vertical container children */
+Vertical > * {
+    margin-bottom: 1;
+}
+
+/* Remove bottom margin from last child to avoid extra space */
+Vertical > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Semantic spacing for Horizontal container children */
+Horizontal > * {
+    margin-right: 1;
+}
+
+Horizontal > *:last-child {
+    margin-right: 0;
+}
+
+/* Ensure content widgets fill their tab pane */
+ChatInterface {
+    height: 1fr;
+    min-height: 10;
+    padding: 0 1;
+}
+
+SettingsPanel {
+    height: auto;
+    padding: 0 1;
+}
+
+FileBrowser {
+    height: 1fr;
+    min-height: 10;
+    padding: 0 1;
+}
+
+
+FileBrowser > Static {
+    height: auto;
+}
+
+FileBrowser > Button {
+    height: auto;
+    dock: bottom;
+}
+
+FileBrowser > Horizontal {
+    height: 1fr;
+}
+
+/* DirectoryTree sizing */
+DirectoryTree {
+    height: 1fr;
+    width: 1fr;
+    border: solid $surface-lighten-2;
+}
+
+#chat-history {
+    height: 1fr;
+    border: solid $surface-lighten-2;
+    background: $panel;
+    min-height: 5;
+}
+
+#chat-input {
+    height: auto;
+}
+
+#send-button {
+    height: auto;
+}
+
+.setting-row {
+    height: auto;
+    margin-bottom: 1;
+}
+
+.setting-row Label {
+    width: 15;
+}

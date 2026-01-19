@@ -8,3 +8,16 @@ General app architecture for the RAG agent application
 - PDF text extraction w/ `PyMuPDF`
 
 - UI interface w/ `Rich` & `Textual`
+
+## Workflow
+
+Get Docs -> Process Docs -> Vector Store
+
+Load Model -> Load Embeddings -> Get Tools -> Create Agent
+
+Created Agent
+ - Prompt -> Search For Context -> Respond
+
+Tools:
+ - Search Vector Store
+ - Determine Prompt?
