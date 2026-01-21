@@ -4,8 +4,8 @@ rag-agent/
 │   ├── __init__.py
 │   ├── core/
 │   │   ├── __init__.py
-│   │   ├── document_processor.py      # File upload & processing logic
-│   │   ├── embeddings. py               # Vector embeddings generation
+│   │   ├── document_processor.py       # File upload & processing logic
+│   │   ├── embeddings. py              # Vector embeddings generation
 │   │   ├── vector_store.py             # Vector database operations
 │   │   ├── retriever.py                # Document retrieval logic
 │   │   └── llm_interface.py            # LLM API interactions
