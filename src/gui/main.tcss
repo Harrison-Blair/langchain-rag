@@ -4,6 +4,11 @@ Button {
     width: auto;
 }
 
+# Classes
+.auto-height {
+    height: auto;
+}
+
 # FileInterface Styles
 FileInterface Collapsible {
     max-height: 25;
