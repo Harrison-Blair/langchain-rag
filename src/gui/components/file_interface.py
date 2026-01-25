@@ -3,11 +3,10 @@ from textual.containers import Horizontal, VerticalScroll
 from textual.widgets import Collapsible, Button, DirectoryTree
 
 from src.core.vectorstore_manager import vectorstore_manager
+from src.core.document_manager import document_manager
 
 class FileInterface(VerticalScroll):
     """A file interface component for the files tab."""
-
-    UPLOAD_DIR = "./data/uploads/"
     
     def __init__(self) -> None:
         super().__init__()
@@ -15,7 +14,7 @@ class FileInterface(VerticalScroll):
 
     def compose(self) -> ComposeResult:
         with Collapsible(title="Raw Files"): 
-            yield DirectoryTree(self.UPLOAD_DIR, id="file-tree")
+            yield DirectoryTree(document_manager.directory, id="file-tree")
             with Horizontal(classes="auto-height"):
                 yield Button("Refresh", id="refresh-files")
                 yield Button("Open In Explorer", id="open-explorer")
@@ -38,7 +37,7 @@ class FileInterface(VerticalScroll):
             self.vectorstore_manager.create_collection("test_collection")
             self.notify("Created test_collection in vector store.")
         elif button_id == "reset-collections":
-            self.vectorstore_manager.client.reset()
+            self.vectorstore_manager.reset_collections()
             self.notify("Vector store collections have been reset.")
 
     def refresh_file_tree(self) -> None:
