@@ -1,4 +1,5 @@
 document_directory: "./data/uploads/"
+vectorstore_directory: "./data/vectorstores/"
 llm:
   model: "qwen3:1.7b"
   temperature: 0.0
