@@ -19,9 +19,7 @@ class FileInterface(VerticalScroll):
                 yield Button("Refresh", id="refresh-files")
                 yield Button("Open In Explorer", id="open-explorer")
         with Horizontal():
-            yield Button("Get Collections Debug", id="get-collections")
-            yield Button("Make Collection Debug", id="make-collection")
-            yield Button("Reset collections Debug", id="reset-collections")
+            yield Button("Populate Vectorstore Debug", id="populate-vectorstore")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         """Handle button press events."""
@@ -30,15 +28,9 @@ class FileInterface(VerticalScroll):
             self.refresh_file_tree()
         elif button_id == "open-explorer":
             self.open_in_explorer()
-        elif button_id == "get-collections":
-            collections = self.vectorstore_manager.get_collections()
-            self.notify(f"Vector Store Collections: {collections}")
-        elif button_id == "make-collection":
-            self.vectorstore_manager.create_collection("test_collection")
-            self.notify("Created test_collection in vector store.")
-        elif button_id == "reset-collections":
-            self.vectorstore_manager.reset_collections()
-            self.notify("Vector store collections have been reset.")
+        elif button_id == "populate-vectorstore":
+            self.vectorstore_manager.populate_vectorstore()
+            self.notify("Vector store has been populated with documents.")
 
     def refresh_file_tree(self) -> None:
         """Refresh the file tree to reflect current files."""
